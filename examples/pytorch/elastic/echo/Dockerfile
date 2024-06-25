@@ -1,4 +1,4 @@
-FROM python:3.8-buster
+FROM python:3.11-buster
 WORKDIR /workspace
 RUN pip install torch==1.13.1 numpy
 # TODO Replace this with the PIP version when available

@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.12
 
 RUN pip install tensorflow==2.11.0 tensorflow_datasets==4.7.0
 
