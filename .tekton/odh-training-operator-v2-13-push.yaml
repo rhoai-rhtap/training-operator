@@ -22,7 +22,7 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/rhoai/odh-training-operator:{{revision}}
+    value: quay.io/rhoai/odh-training-operator-rhel8:{{revision}}
   - name: dockerfile
     value: build/images/training-operator/Dockerfile
   - name: path-context
