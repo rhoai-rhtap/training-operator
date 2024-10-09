@@ -1,5 +1,7 @@
-# Build the manager binary
-FROM golang:1.21 as builder
+ARG SOURCE_CODE=.
+ARG CI_CONTAINER_VERSION="unknown"
+FROM registry.access.redhat.com/ubi8/go-toolset@sha256:4ec05fd5b355106cc0d990021a05b71bbfb9231e4f5bdc0c5316515edf6a1c96 as builder
+
 
 WORKDIR /workspace
 # Copy the Go Modules manifests
@@ -13,11 +15,29 @@ RUN go mod download
 COPY . .
 
 # Build
-RUN CGO_ENABLED=0 GOOS=linux GO111MODULE=on go build -a -o manager cmd/training-operator.v1/main.go
+USER root
+RUN CGO_ENABLED=1 GOOS=linux GO111MODULE=on go build -tags strictfipsruntime -a -o manager cmd/training-operator.v1/main.go
 
 # Use distroless as minimal base image to package the manager binary
 # Refer to https://github.com/GoogleContainerTools/distroless for more details
-FROM gcr.io/distroless/static:latest
+FROM registry.redhat.io/ubi8/ubi-minimal:latest AS runtime
+
+ARG CI_CONTAINER_VERSION
+ARG USER=65532
+
+LABEL com.redhat.component="odh-training-operator-container" \
+      name="managed-open-data-hub/odh-training-operator-rhel8" \
+      version="${CI_CONTAINER_VERSION}" \
+      git.url="${CI_TRAINING_OPERATOR_UPSTREAM_URL}" \
+      git.commit="${CI_TRAINING_OPERATOR_UPSTREAM_COMMIT}" \
+      summary="odh-training-operator" \
+      io.openshift.expose-services="" \
+      io.k8s.display-name="odh-training-operator" \
+      maintainer="['managed-open-data-hub@redhat.com']" \
+      description="Training Operator is a Kubernetes-native project for fine-tuning and scalable distributed training of AI/ML models created with various frameworks such as PyTorch." \
+      com.redhat.license_terms="https://www.redhat.com/licenses/Red_Hat_Standard_EULA_20191108.pdf"
 WORKDIR /
 COPY --from=builder /workspace/manager .
+## Create a non-root user with UID 65532 and switch to it
+USER ${USER}:${USER}
 ENTRYPOINT ["/manager"]
