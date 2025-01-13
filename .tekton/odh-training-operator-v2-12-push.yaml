@@ -9,7 +9,8 @@ metadata:
     pipelinesascode.tekton.dev/max-keep-runs: "3"
     build.appstudio.openshift.io/build-nudge-files: "build/operator-nudging.yaml"
     pipelinesascode.tekton.dev/on-cel-expression: event == "push" && target_branch
-      == "rhoai-2.12"
+      && target_branch == "rhoai-2.12"
+      && ( !".tekton/**".pathChanged() || ".tekton/odh-codeflare-operator-v2-12-push.yaml".pathChanged() )
   creationTimestamp: null
   labels:
     appstudio.openshift.io/application: rhoai-v2-12
