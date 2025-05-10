@@ -463,7 +463,8 @@ spec:
       optional: true
     - name: netrc
       optional: true
-  taskRunTemplate: {}
+  taskRunTemplate:
+    serviceAccountName: build-pipeline-training-operator-poc
   workspaces:
   - name: workspace
     volumeClaimTemplate:
