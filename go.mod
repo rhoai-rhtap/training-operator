@@ -1,6 +1,6 @@
 module github.com/kubeflow/training-operator
 
-go 1.20
+go 1.22
 
 require (
 	github.com/go-logr/logr v1.4.1
@@ -21,7 +21,7 @@ require (
 	k8s.io/utils v0.0.0-20230726121419-3b25d923346b
 	sigs.k8s.io/controller-runtime v0.17.2
 	sigs.k8s.io/scheduler-plugins v0.26.7
-	sigs.k8s.io/yaml v1.4.0
+	sigs.k8s.io/yaml v1.6.0
 	volcano.sh/apis v1.8.0
 )
 
@@ -71,6 +71,7 @@ require (
 	github.com/ray-project/kuberay/ray-operator v0.0.0-20231016183545-097828931d15 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
+	go.yaml.in/yaml/v2 v2.4.2 // indirect
 	golang.org/x/exp v0.0.0-20230905200255-921286631fa9 // indirect
 	golang.org/x/mod v0.14.0 // indirect
 	golang.org/x/net v0.20.0 // indirect
