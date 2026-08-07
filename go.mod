@@ -1,6 +1,6 @@
 module github.com/kubeflow/training-operator
 
-go 1.20
+go 1.21
 
 require (
 	github.com/go-logr/logr v1.4.1
@@ -11,7 +11,7 @@ require (
 	github.com/prometheus/client_golang v1.18.0
 	github.com/sirupsen/logrus v1.9.0
 	github.com/stretchr/testify v1.8.4
-	go.uber.org/zap v1.26.0
+	go.uber.org/zap v1.28.0
 	k8s.io/api v0.29.3
 	k8s.io/apimachinery v0.29.3
 	k8s.io/client-go v0.29.3
