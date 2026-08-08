@@ -6,7 +6,7 @@ toolchain go1.22.1
 
 require (
 	github.com/kubeflow/training-operator v0.0.0-00010101000000-000000000000
-	k8s.io/klog/v2 v2.110.1
+	k8s.io/klog/v2 v2.140.0
 	k8s.io/kube-openapi v0.0.0-20231010175941-2dd684a91f00
 )
 
@@ -21,7 +21,6 @@ require (
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/gnostic-models v0.6.8 // indirect
-	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/google/gofuzz v1.2.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
