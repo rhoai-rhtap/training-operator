@@ -1,10 +1,10 @@
 module github.com/kubeflow/training-operator
 
-go 1.20
+go 1.25.0
 
 require (
 	github.com/go-logr/logr v1.4.1
-	github.com/google/go-cmp v0.6.0
+	github.com/google/go-cmp v0.7.0
 	github.com/onsi/ginkgo/v2 v2.15.0
 	github.com/onsi/gomega v1.31.1
 	github.com/project-codeflare/codeflare-common v0.0.0-20240404131119-10cc4982cd0e
@@ -67,7 +67,7 @@ require (
 	github.com/project-codeflare/appwrapper v0.7.0 // indirect
 	github.com/prometheus/client_model v0.5.0 // indirect
 	github.com/prometheus/common v0.45.0 // indirect
-	github.com/prometheus/procfs v0.12.0 // indirect
+	github.com/prometheus/procfs v0.22.0 // indirect
 	github.com/ray-project/kuberay/ray-operator v0.0.0-20231016183545-097828931d15 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
@@ -75,7 +75,7 @@ require (
 	golang.org/x/mod v0.14.0 // indirect
 	golang.org/x/net v0.20.0 // indirect
 	golang.org/x/oauth2 v0.12.0 // indirect
-	golang.org/x/sys v0.16.0 // indirect
+	golang.org/x/sys v0.47.0 // indirect
 	golang.org/x/term v0.16.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
