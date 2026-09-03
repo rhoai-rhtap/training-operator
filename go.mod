@@ -64,7 +64,7 @@ require (
 	github.com/openshift/client-go v0.0.0-20221019143426-16aed247da5c // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/project-codeflare/appwrapper v0.7.0 // indirect
+	github.com/project-codeflare/appwrapper v1.2.2 // indirect
 	github.com/prometheus/client_model v0.5.0 // indirect
 	github.com/prometheus/common v0.45.0 // indirect
 	github.com/prometheus/procfs v0.12.0 // indirect
