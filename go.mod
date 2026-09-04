@@ -22,7 +22,7 @@ require (
 	sigs.k8s.io/controller-runtime v0.17.2
 	sigs.k8s.io/scheduler-plugins v0.26.7
 	sigs.k8s.io/yaml v1.4.0
-	volcano.sh/apis v1.8.0
+	volcano.sh/apis v1.15.2
 )
 
 require (
