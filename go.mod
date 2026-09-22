@@ -7,7 +7,7 @@ require (
 	github.com/google/go-cmp v0.6.0
 	github.com/onsi/ginkgo/v2 v2.15.0
 	github.com/onsi/gomega v1.31.1
-	github.com/project-codeflare/codeflare-common v0.0.0-20240404131119-10cc4982cd0e
+	github.com/project-codeflare/codeflare-common v0.0.0-20260514102653-929c10b7c6f3
 	github.com/prometheus/client_golang v1.18.0
 	github.com/sirupsen/logrus v1.9.0
 	github.com/stretchr/testify v1.8.4
